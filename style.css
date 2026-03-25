@@ -1,0 +1,315 @@
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo do site */
+body{
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header{
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+}
+
+header img{
+    max-width: 200px;
+}
+
+/* Área dos produtos */
+.content{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* Card do produto */
+.produto{
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Efeito quando passa o mouse */
+.produto:hover{
+    transform: scale(1.03);
+}
+
+/* Título */
+.produto h2{
+    margin-bottom: 10px;
+}
+
+/* Imagens */
+.produto img{
+    margin: 10px 0;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Labels */
+.produto label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Select */
+.produto select{
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Botão */
+.produto button{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #00b894;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.produto button:hover{
+    background-color: #019875;
+}
+
+.search-bar {
+  width: 300px;
+  padding: 8px;
+  margin: 20px 0;}
+
+  /* ============================================
+   RamPC — search.css
+   Estilos exclusivos da barra de pesquisa
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Barlow:wght@300;400;600&display=swap');
+
+/* ── VARIÁVEIS ── */
+:root {
+    --accent:   #00e5ff;
+    --accent2:  #ff4500;
+    --surface:  #111118;
+    --card:     #16161f;
+    --border:   #22222e;
+    --text:     #e8e8f0;
+    --muted:    #55556a;
+    --ryzen:    #e85d04;
+    --intel:    #0071c5;
+    --nvidia:   #76b900;
+    --amd-rx:   #cc0000;
+}
+
+/* ══════════════════════════════════
+   BARRA DE PESQUISA
+   ══════════════════════════════════ */
+
+.search-wrap {
+    flex: 1;
+    max-width: 580px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.search-box:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 229, 255, .1);
+}
+
+.search-box svg {
+    margin: 0 14px;
+    flex-shrink: 0;
+    color: var(--muted);
+    width: 16px;
+    height: 16px;
+    transition: color .2s;
+}
+
+.search-box:focus-within svg {
+    color: var(--accent);
+}
+
+#search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    padding: 13px 0;
+    letter-spacing: .5px;
+}
+
+#search-input::placeholder {
+    color: var(--muted);
+    font-weight: 300;
+}
+
+#clear-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 0 14px;
+    font-size: 1.1rem;
+    line-height: 1;
+    display: none;
+    transition: color .15s;
+}
+
+#clear-btn:hover   { color: var(--accent2); }
+#clear-btn.visible { display: block; }
+
+/* ══════════════════════════════════
+   FILTROS (CHIPS)
+   ══════════════════════════════════ */
+
+.filters-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 12px 0;
+}
+
+.filter-label {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.chip {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 5px 14px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    cursor: pointer;
+    color: var(--muted);
+    transition: border-color .15s, color .15s, background .15s;
+}
+
+.chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.chip.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #0a0a0f;
+}
+
+.chip[data-f="ryzen"].active  { background: var(--ryzen);  border-color: var(--ryzen);  color: #fff; }
+.chip[data-f="intel"].active  { background: var(--intel);  border-color: var(--intel);  color: #fff; }
+.chip[data-f="nvidia"].active { background: var(--nvidia); border-color: var(--nvidia); color: #0a0a0f; }
+.chip[data-f="amd-rx"].active { background: var(--amd-rx); border-color: var(--amd-rx); color: #fff; }
+
+/* ══════════════════════════════════
+   CONTADOR DE RESULTADOS
+   ══════════════════════════════════ */
+
+.results-bar {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 1px;
+    padding: 6px 0 12px;
+}
+
+.results-bar span {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* ══════════════════════════════════
+   ESTADO VAZIO
+   ══════════════════════════════════ */
+
+.empty-msg {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+}
+
+.empty-msg.show { display: block; }
+
+.empty-msg .empty-icon {
+    font-size: 2.5rem;
+    opacity: .35;
+    margin-bottom: 12px;
+}
+
+.empty-msg p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.empty-msg p + p {
+    margin-top: 6px;
+    font-size: 0.76rem;
+}
+
+/* ══════════════════════════════════
+   PRODUTO OCULTO (usado pelo JS)
+   ══════════════════════════════════ */
+
+.produto.hidden {
+    display: none;
+}
+
+/* ══════════════════════════════════
+   RESPONSIVO
+   ══════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .search-wrap {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .filters-bar {
+        gap: 7px;
+    }
+
+    #search-input {
+        font-size: 0.88rem;
+        padding: 11px 0;
+    }
+}

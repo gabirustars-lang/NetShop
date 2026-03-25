@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RamPC </title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+         <img style="width: 256px;" src="data:image/jpeg;base64,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" alt="NETSHOP"> 
+    </header>
+
+    <div class="content">
+        <!-- item 1 -->
+        <div class="produto">
+
+            <label> COMPUTADOR </label>
+            <img src="https://cdn.dooca.store/151246/posts/gabinete-lian-li-pc-gamer-br-1000x.png?v=1735772944&webp=0" height="200px" width="200px" alt="Computudor NVIDIA RTX com Ryzen">
+
+            <label> Memória Ram </label>
+            <select name="ram" id="ram">
+                <option value="4gb"> 4gb </option>
+                <option value="8gb"> 8gb </option>
+                <option value="16gb"> 16gb </option>
+                <option value="32gb"> 32gb </option>
+                <option value="64gb"> 64gb </option>
+            </select>
+
+            <!-- Processador RYSEN  -->
+            <label for="processador-ryzen">Processador RYZEN</label>
+<select name="processador-ryzen" id="processador-ryzen">
+
+    <optgroup label="Ryzen 3">
+        <option value="R3 1200">R3 1200</option>
+        <option value="R3 1300X">R3 1300X</option>
+        <option value="R3 2200G">R3 2200G</option>
+        <option value="R3 3200G">R3 3200G</option>
+        <option value="R3 4100">R3 4100</option>
+        <option value="R3 5300G">R3 5300G</option>
+    </optgroup>
+
+    <optgroup label="Ryzen 5">
+        <option value="R5 1600">R5 1600</option>
+        <option value="R5 2600">R5 2600</option>
+        <option value="R5 3600">R5 3600</option>
+        <option value="R5 5600">R5 5600</option>
+        <option value="R5 5600X">R5 5600X</option>
+        <option value="R5 7600">R5 7600</option>
+        <option value="R5 7600X">R5 7600X</option>
+        <option value="R5 9600X">R5 9600X</option>
+    </optgroup>
+
+    <optgroup label="Ryzen 7">
+        <option value="R7 1700">R7 1700</option>
+        <option value="R7 2700X">R7 2700X</option>
+        <option value="R7 3700X">R7 3700X</option>
+        <option value="R7 5700X">R7 5700X</option>
+        <option value="R7 5800X">R7 5800X</option>
+        <option value="R7 5800X3D">R7 5800X3D</option>
+        <option value="R7 7700X">R7 7700X</option>
+        <option value="R7 7800X3D">R7 7800X3D</option>
+        <option value="R7 9700X">R7 9700X</option>
+        <option value="R7 9800X3D">R7 9800X3D</option>
+    </optgroup>
+
+    <optgroup label="Ryzen 9">
+        <option value="R9 3900X">R9 3900X</option>
+        <option value="R9 3950X">R9 3950X</option>
+        <option value="R9 5900X">R9 5900X</option>
+        <option value="R9 5950X">R9 5950X</option>
+        <option value="R9 7900X">R9 7900X</option>
+        <option value="R9 7900X3D">R9 7900X3D</option>
+        <option value="R9 7950X">R9 7950X</option>
+        <option value="R9 7950X3D">R9 7950X3D</option>
+        <option value="R9 9900X">R9 9900X</option>
+        <option value="R9 9950X">R9 9950X</option>
+    </optgroup>
+
+</select>
+            <!-- NVIDIA RTX  -->
+            <label> NVIDIA RTX </label>
+            <select name="NVIDIA RTX" id="GPU">
+                <option value="RTX3050"> RTX3050 </option>
+                <option value="RTX3060"> RTX3060 </option>
+                 <option value="RTX3070"> RTX3070 </option>
+                <option value="RTX3080"> RTX3080 </option>
+                 <option value="RTX3090"> RTX3090 </option>
+
+                 <option value="RTX4050"> RTX4050 </option>
+                <option value="RTX4060"> RTX4060 </option>
+                 <option value="RTX4070"> RTX4070 </option>
+                <option value="RTX4080"> RTX4080 </option>
+                <option value="RTX4090"> RTX4090 </option>
+
+                 <option value="RTX5050"> RTX5050 </option>
+                <option value="RTX5060"> RTX5060 </option>
+                 <option value="RTX5070"> RTX5070 </option>
+                <option value="RTX5080"> RTX5080 </option>
+                <option value="RTX5090"> RTX5090 </option>
+            </select>
+
+            <label> SSD NVMe</label>
+            <select name="SSD NVMe" id=" SSD NVMe">
+                <option value="128gb"> 128gb </option>
+                <option value="256gb"> 256gb </option>
+                <option value="512gb"> 512gb </option>
+                <option value="1tb"> 1tb </option>
+                <option value="2tb"> 2tb </option>
+                <option value="4tb"> 4tb </option>
+                <option value="8tb"> 8tb</option>
+            </select>
+
+
+            <button type="button"> Comprar </button>
+            <button type="button"> Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <label> COMPUTADOR</label>
+            <img src="https://cdn.dooca.store/559/menu-values/gb1791-h-470x543.png?v=1743531747&webp=0" height="200" width="200" alt="COMPUTADOR INTEL CORE MAIS NVIDIA RTX">
+            <label> Memória Ram </label>
+            <select name="ram" id="ram">
+                <option value="4gb"> 4gb </option>
+                <option value="8gb"> 8gb </option>
+                <option value="16gb"> 16gb </option>
+                <option value="32gb"> 32gb </option>
+                <option value="64gb"> 64gb </option>
+            </select>
+
+            <!-- Processador Intel Core  -->
+ <label for="processador-intel">Processador Intel Core</label>
+<select name="processador-intel" id="processador-intel">
+
+    <optgroup label="Core i3">
+        <option value="i3-10100">i3-10100</option>
+        <option value="i3-10100F">i3-10100F</option>
+        <option value="i3-10300">i3-10300</option>
+        <option value="i3-10320">i3-10320</option>
+        <option value="i3-11100">i3-11100</option>
+        <option value="i3-11100F">i3-11100F</option>
+        <option value="i3-12100">i3-12100</option>
+        <option value="i3-12100F">i3-12100F</option>
+        <option value="i3-13100">i3-13100</option>
+        <option value="i3-13100F">i3-13100F</option>
+        <option value="i3-14100">i3-14100</option>
+        <option value="i3-14100F">i3-14100F</option>
+    </optgroup>
+
+    <optgroup label="Core i5">
+        <option value="i5-10400">i5-10400</option>
+        <option value="i5-10400F">i5-10400F</option>
+        <option value="i5-10500">i5-10500</option>
+        <option value="i5-10600">i5-10600</option>
+        <option value="i5-10600K">i5-10600K</option>
+        <option value="i5-10600KF">i5-10600KF</option>
+        <option value="i5-11400">i5-11400</option>
+        <option value="i5-11400F">i5-11400F</option>
+        <option value="i5-11500">i5-11500</option>
+        <option value="i5-11600">i5-11600</option>
+        <option value="i5-11600K">i5-11600K</option>
+        <option value="i5-11600KF">i5-11600KF</option>
+        <option value="i5-12400">i5-12400</option>
+        <option value="i5-12400F">i5-12400F</option>
+        <option value="i5-12500">i5-12500</option>
+        <option value="i5-12600">i5-12600</option>
+        <option value="i5-12600K">i5-12600K</option>
+        <option value="i5-12600KF">i5-12600KF</option>
+        <option value="i5-13400">i5-13400</option>
+        <option value="i5-13400F">i5-13400F</option>
+        <option value="i5-13500">i5-13500</option>
+        <option value="i5-13600">i5-13600</option>
+        <option value="i5-13600K">i5-13600K</option>
+        <option value="i5-13600KF">i5-13600KF</option>
+        <option value="i5-14400">i5-14400</option>
+        <option value="i5-14400F">i5-14400F</option>
+        <option value="i5-14500">i5-14500</option>
+        <option value="i5-14600">i5-14600</option>
+        <option value="i5-14600K">i5-14600K</option>
+        <option value="i5-14600KF">i5-14600KF</option>
+    </optgroup>
+
+    <optgroup label="Core i7">
+        <option value="i7-10700">i7-10700</option>
+        <option value="i7-10700F">i7-10700F</option>
+        <option value="i7-10700K">i7-10700K</option>
+        <option value="i7-10700KF">i7-10700KF</option>
+        <option value="i7-11700">i7-11700</option>
+        <option value="i7-11700F">i7-11700F</option>
+        <option value="i7-11700K">i7-11700K</option>
+        <option value="i7-11700KF">i7-11700KF</option>
+        <option value="i7-12700">i7-12700</option>
+        <option value="i7-12700F">i7-12700F</option>
+        <option value="i7-12700K">i7-12700K</option>
+        <option value="i7-12700KF">i7-12700KF</option>
+        <option value="i7-13700">i7-13700</option>
+        <option value="i7-13700F">i7-13700F</option>
+        <option value="i7-13700K">i7-13700K</option>
+        <option value="i7-13700KF">i7-13700KF</option>
+        <option value="i7-14700">i7-14700</option>
+        <option value="i7-14700F">i7-14700F</option>
+        <option value="i7-14700K">i7-14700K</option>
+        <option value="i7-14700KF">i7-14700KF</option>
+    </optgroup>
+
+    <optgroup label="Core i9">
+        <option value="i9-10900">i9-10900</option>
+        <option value="i9-10900F">i9-10900F</option>
+        <option value="i9-10900K">i9-10900K</option>
+        <option value="i9-10900KF">i9-10900KF</option>
+        <option value="i9-10900X">i9-10900X</option>
+        <option value="i9-11900">i9-11900</option>
+        <option value="i9-11900F">i9-11900F</option>
+        <option value="i9-11900K">i9-11900K</option>
+        <option value="i9-11900KF">i9-11900KF</option>
+        <option value="i9-12900">i9-12900</option>
+        <option value="i9-12900F">i9-12900F</option>
+        <option value="i9-12900K">i9-12900K</option>
+        <option value="i9-12900KF">i9-12900KF</option>
+        <option value="i9-12900KS">i9-12900KS</option>
+        <option value="i9-13900">i9-13900</option>
+        <option value="i9-13900F">i9-13900F</option>
+        <option value="i9-13900K">i9-13900K</option>
+        <option value="i9-13900KF">i9-13900KF</option>
+        <option value="i9-13900KS">i9-13900KS</option>
+        <option value="i9-14900">i9-14900</option>
+        <option value="i9-14900F">i9-14900F</option>
+        <option value="i9-14900K">i9-14900K</option>
+        <option value="i9-14900KF">i9-14900KF</option>
+        <option value="i9-14900KS">i9-14900KS</option>
+    </optgroup>
+
+    <optgroup label="Core Ultra">
+        <option value="Core Ultra 5 245K">Core Ultra 5 245K</option>
+        <option value="Core Ultra 5 245KF">Core Ultra 5 245KF</option>
+        <option value="Core Ultra 7 265K">Core Ultra 7 265K</option>
+        <option value="Core Ultra 7 265KF">Core Ultra 7 265KF</option>
+        <option value="Core Ultra 9 285K">Core Ultra 9 285K</option>
+    </optgroup>
+
+</select>
+
+            <!-- NVIDIA RTX  -->
+            <label> NVIDIA RTX </label>
+            <select name="NVIDIA RTX" id="GPU">
+                <option value="RTX3050"> RTX3050 </option>
+                <option value="RTX3060"> RTX3060 </option>
+                 <option value="RTX3070"> RTX3070 </option>
+                <option value="RTX3080"> RTX3080 </option>
+                 <option value="RTX3090"> RTX3090 </option>
+
+                 <option value="RTX4050"> RTX4050 </option>
+                <option value="RTX4060"> RTX4060 </option>
+                 <option value="RTX4070"> RTX4070 </option>
+                <option value="RTX4080"> RTX4080 </option>
+                <option value="RTX4090"> RTX4090 </option>
+
+                 <option value="RTX5050"> RTX5050 </option>
+                <option value="RTX5060"> RTX5060 </option>
+                 <option value="RTX5070"> RTX5070 </option>
+                <option value="RTX5080"> RTX5080 </option>
+                <option value="RTX5090"> RTX5090 </option>
+            </select>
+
+            <label> SSD NVMe</label>
+            <select name="SSD NVMe" id=" SSD NVMe">
+                <option value="128gb"> 128gb </option>
+                <option value="256gb"> 256gb </option>
+                <option value="512gb"> 512gb </option>
+                <option value="1tb"> 1tb </option>
+                <option value="2tb"> 2tb </option>
+                <option value="4tb"> 4tb </option>
+                <option value="8tb"> 8tb</option>
+            </select>
+
+            <button type="button"> Comprar </button>
+            <button type="button"> Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <label> COMPUTADOR </label>
+            <img src="https://images.tcdn.com.br/img/img_prod/15959/computador_gamer_intel_core_i5_12400f_16gb_3200mhz_rgb_ssd_nvme_480gb_placa_de_video_rtx_4060_8gb_fo_20035_1_c6224943d82bb67ec5eef9f1a0468d4c.jpeg" height="200" width="200" alt="COMPUTADOR FULL AMD">
+
+            <label> Memória Ram </label>
+            <select name="ram" id="ram">
+                <option value="4gb"> 4gb </option>
+                <option value="8gb"> 8gb </option>
+                <option value="16gb"> 16gb </option>
+                <option value="32gb"> 32gb </option>
+                <option value="64gb"> 64gb </option>
+            </select>
+
+            <label for="processador-ryzen">Processador RYZEN</label>
+<select name="processador-ryzen" id="processador-ryzen">
+
+    <optgroup label="Ryzen 3">
+        <option value="R3 1200">R3 1200</option>
+        <option value="R3 1300X">R3 1300X</option>
+        <option value="R3 2200G">R3 2200G</option>
+        <option value="R3 3200G">R3 3200G</option>
+        <option value="R3 4100">R3 4100</option>
+        <option value="R3 5300G">R3 5300G</option>
+    </optgroup>
+
+    <optgroup label="Ryzen 5">
+        <option value="R5 1600">R5 1600</option>
+        <option value="R5 2600">R5 2600</option>
+        <option value="R5 3600">R5 3600</option>
+        <option value="R5 5600">R5 5600</option>
+        <option value="R5 5600X">R5 5600X</option>
+        <option value="R5 7600">R5 7600</option>
+        <option value="R5 7600X">R5 7600X</option>
+        <option value="R5 9600X">R5 9600X</option>
+    </optgroup>
+
+    <optgroup label="Ryzen 7">
+        <option value="R7 1700">R7 1700</option>
+        <option value="R7 2700X">R7 2700X</option>
+        <option value="R7 3700X">R7 3700X</option>
+        <option value="R7 5700X">R7 5700X</option>
+        <option value="R7 5800X">R7 5800X</option>
+        <option value="R7 5800X3D">R7 5800X3D</option>
+        <option value="R7 7700X">R7 7700X</option>
+        <option value="R7 7800X3D">R7 7800X3D</option>
+        <option value="R7 9700X">R7 9700X</option>
+        <option value="R7 9800X3D">R7 9800X3D</option>
+    </optgroup>
+
+    <optgroup label="Ryzen 9">
+        <option value="R9 3900X">R9 3900X</option>
+        <option value="R9 3950X">R9 3950X</option>
+        <option value="R9 5900X">R9 5900X</option>
+        <option value="R9 5950X">R9 5950X</option>
+        <option value="R9 7900X">R9 7900X</option>
+        <option value="R9 7900X3D">R9 7900X3D</option>
+        <option value="R9 7950X">R9 7950X</option>
+        <option value="R9 7950X3D">R9 7950X3D</option>
+        <option value="R9 9900X">R9 9900X</option>
+        <option value="R9 9950X">R9 9950X</option>
+    </optgroup>
+
+</select>
+
+            <label> Placa AMD </label>
+            <select name="Placa AMD" id="Placa AMD">
+                <option value="RX5500"> RX5500 </option>
+                <option value="RX5500XT"> RX5500XT </option>
+                <option value="RX5600XT"> RX5600XT </option>
+                <option value="RX5700"> RX5700 </option>
+                <option value="RX5700XT"> RX5700XT </option>
+                <option value="RX6400"> RX6400 </option>
+                <option value="RX6500XT"> RX6500XT </option>
+                <option value="RX6600XT"> RX6600XT </option>
+                <option value="RX6650XT"> RX6650XT </option>
+                <option value="RX6700"> RX6700 </option>
+                <option value="RX6750XT"> RX6750XT </option>
+                <option value="RX6800"> RX6800 </option>
+                <option value="RX6800XT"> RX6800XT </option>
+                <option value="RX6900XT"> RX6900XT </option>
+                <option value="RX6950XT"> RX6950XT </option>
+                <option value="RX7600"> RX7600 </option>
+                <option value="RX7600XT"> RX7600XT </option>
+                <option value="RX7700XT"> RX7700XT </option>
+                <option value="RX7800XT"> RX7800XT </option>
+                <option value="RX7900GRE"> RX7900GRE </option>
+                <option value="RX7900XT"> RX7900XT </option>
+                <option value="RX7900XTX"> RX7900XTX </option>
+                <option value="RX8600"> RX8600 </option>
+                <option value="RX8600XT"> RX8600XT </option>
+                <option value="RX8700"> RX8700 </option>
+                <option value="RX8700XT"> RX8700XT </option>
+                <option value="RX9060"> RX9060 </option>
+                <option value="RX9060XT"> RX9060XT </option>
+                <option value="RX9070"> RX9070 </option>
+                <option value="RX9070XT"> RX9070XT </option>
+                <option value="RX9080"> RX9080 </option>
+                <option value="RX9080XT"> RX9080XT </option>
+                <option value="RX9090"> RX9090 </option>
+                <option value="RX9090XT"> RX9090XT </option>
+            </select>
+
+            <label> SSD NVMe</label>
+            <select name="SSD NVMe" id=" SSD NVMe">
+                <option value="128gb"> 128gb </option>
+                <option value="256gb"> 256gb </option>
+                <option value="512gb"> 512gb </option>
+                <option value="1tb"> 1tb </option>
+                <option value="2tb"> 2tb </option>
+                <option value="4tb"> 4tb </option>
+                <option value="8tb"> 8tb</option>
+            </select>
+
+            <button type="button"> Comprar </button>
+            <button type="button"> Adicionar ao Carrinho</button>
+        </div> 
+
+        <div class="produto">
+            <label> COMPUTADOR </label>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2w5MOqwLb9ggV6jD1UKxp0JZiw6lzKV0njA&s" height="200" width="200" alt="COMPUTADOR INTEL E AMD">
+
+            <label> Memória Ram </label>
+            <select name="ram" id="ram">
+                <option value="4gb"> 4gb </option>
+                <option value="8gb"> 8gb </option>
+                <option value="16gb"> 16gb </option>
+                <option value="32gb"> 32gb </option>
+                <option value="64gb"> 64gb </option>
+            </select>
+
+            <label for="processador-intel">Processador Intel Core</label>
+<select name="processador-intel" id="processador-intel">
+
+    <optgroup label="Core i3">
+        <option value="i3-10100">i3-10100</option>
+        <option value="i3-10100F">i3-10100F</option>
+        <option value="i3-10300">i3-10300</option>
+        <option value="i3-10320">i3-10320</option>
+        <option value="i3-11100">i3-11100</option>
+        <option value="i3-11100F">i3-11100F</option>
+        <option value="i3-12100">i3-12100</option>
+        <option value="i3-12100F">i3-12100F</option>
+        <option value="i3-13100">i3-13100</option>
+        <option value="i3-13100F">i3-13100F</option>
+        <option value="i3-14100">i3-14100</option>
+        <option value="i3-14100F">i3-14100F</option>
+    </optgroup>
+
+    <optgroup label="Core i5">
+        <option value="i5-10400">i5-10400</option>
+        <option value="i5-10400F">i5-10400F</option>
+        <option value="i5-10500">i5-10500</option>
+        <option value="i5-10600">i5-10600</option>
+        <option value="i5-10600K">i5-10600K</option>
+        <option value="i5-10600KF">i5-10600KF</option>
+        <option value="i5-11400">i5-11400</option>
+        <option value="i5-11400F">i5-11400F</option>
+        <option value="i5-11500">i5-11500</option>
+        <option value="i5-11600">i5-11600</option>
+        <option value="i5-11600K">i5-11600K</option>
+        <option value="i5-11600KF">i5-11600KF</option>
+        <option value="i5-12400">i5-12400</option>
+        <option value="i5-12400F">i5-12400F</option>
+        <option value="i5-12500">i5-12500</option>
+        <option value="i5-12600">i5-12600</option>
+        <option value="i5-12600K">i5-12600K</option>
+        <option value="i5-12600KF">i5-12600KF</option>
+        <option value="i5-13400">i5-13400</option>
+        <option value="i5-13400F">i5-13400F</option>
+        <option value="i5-13500">i5-13500</option>
+        <option value="i5-13600">i5-13600</option>
+        <option value="i5-13600K">i5-13600K</option>
+        <option value="i5-13600KF">i5-13600KF</option>
+        <option value="i5-14400">i5-14400</option>
+        <option value="i5-14400F">i5-14400F</option>
+        <option value="i5-14500">i5-14500</option>
+        <option value="i5-14600">i5-14600</option>
+        <option value="i5-14600K">i5-14600K</option>
+        <option value="i5-14600KF">i5-14600KF</option>
+    </optgroup>
+
+    <optgroup label="Core i7">
+        <option value="i7-10700">i7-10700</option>
+        <option value="i7-10700F">i7-10700F</option>
+        <option value="i7-10700K">i7-10700K</option>
+        <option value="i7-10700KF">i7-10700KF</option>
+        <option value="i7-11700">i7-11700</option>
+        <option value="i7-11700F">i7-11700F</option>
+        <option value="i7-11700K">i7-11700K</option>
+        <option value="i7-11700KF">i7-11700KF</option>
+        <option value="i7-12700">i7-12700</option>
+        <option value="i7-12700F">i7-12700F</option>
+        <option value="i7-12700K">i7-12700K</option>
+        <option value="i7-12700KF">i7-12700KF</option>
+        <option value="i7-13700">i7-13700</option>
+        <option value="i7-13700F">i7-13700F</option>
+        <option value="i7-13700K">i7-13700K</option>
+        <option value="i7-13700KF">i7-13700KF</option>
+        <option value="i7-14700">i7-14700</option>
+        <option value="i7-14700F">i7-14700F</option>
+        <option value="i7-14700K">i7-14700K</option>
+        <option value="i7-14700KF">i7-14700KF</option>
+    </optgroup>
+
+    <optgroup label="Core i9">
+        <option value="i9-10900">i9-10900</option>
+        <option value="i9-10900F">i9-10900F</option>
+        <option value="i9-10900K">i9-10900K</option>
+        <option value="i9-10900KF">i9-10900KF</option>
+        <option value="i9-10900X">i9-10900X</option>
+        <option value="i9-11900">i9-11900</option>
+        <option value="i9-11900F">i9-11900F</option>
+        <option value="i9-11900K">i9-11900K</option>
+        <option value="i9-11900KF">i9-11900KF</option>
+        <option value="i9-12900">i9-12900</option>
+        <option value="i9-12900F">i9-12900F</option>
+        <option value="i9-12900K">i9-12900K</option>
+        <option value="i9-12900KF">i9-12900KF</option>
+        <option value="i9-12900KS">i9-12900KS</option>
+        <option value="i9-13900">i9-13900</option>
+        <option value="i9-13900F">i9-13900F</option>
+        <option value="i9-13900K">i9-13900K</option>
+        <option value="i9-13900KF">i9-13900KF</option>
+        <option value="i9-13900KS">i9-13900KS</option>
+        <option value="i9-14900">i9-14900</option>
+        <option value="i9-14900F">i9-14900F</option>
+        <option value="i9-14900K">i9-14900K</option>
+        <option value="i9-14900KF">i9-14900KF</option>
+        <option value="i9-14900KS">i9-14900KS</option>
+    </optgroup>
+
+    <optgroup label="Core Ultra">
+        <option value="Core Ultra 5 245K">Core Ultra 5 245K</option>
+        <option value="Core Ultra 5 245KF">Core Ultra 5 245KF</option>
+        <option value="Core Ultra 7 265K">Core Ultra 7 265K</option>
+        <option value="Core Ultra 7 265KF">Core Ultra 7 265KF</option>
+        <option value="Core Ultra 9 285K">Core Ultra 9 285K</option>
+    </optgroup>
+
+</select>
+
+            <label> Placa AMD </label>
+            <select name="Placa AMD" id="Placa AMD">
+                <option value="RX5500"> RX5500 </option>
+                <option value="RX5500XT"> RX5500XT </option>
+                <option value="RX5600XT"> RX5600XT </option>
+                <option value="RX5700"> RX5700 </option>
+                <option value="RX5700XT"> RX5700XT </option>
+                <option value="RX6400"> RX6400 </option>
+                <option value="RX6500XT"> RX6500XT </option>
+                <option value="RX6600XT"> RX6600XT </option>
+                <option value="RX6650XT"> RX6650XT </option>
+                <option value="RX6700"> RX6700 </option>
+                <option value="RX6750XT"> RX6750XT </option>
+                <option value="RX6800"> RX6800 </option>
+                <option value="RX6800XT"> RX6800XT </option>
+                <option value="RX6900XT"> RX6900XT </option>
+                <option value="RX6950XT"> RX6950XT </option>
+                <option value="RX7600"> RX7600 </option>
+                <option value="RX7600XT"> RX7600XT </option>
+                <option value="RX7700XT"> RX7700XT </option>
+                <option value="RX7800XT"> RX7800XT </option>
+                <option value="RX7900GRE"> RX7900GRE </option>
+                <option value="RX7900XT"> RX7900XT </option>
+                <option value="RX7900XTX"> RX7900XTX </option>
+                <option value="RX8600"> RX8600 </option>
+                <option value="RX8600XT"> RX8600XT </option>
+                <option value="RX8700"> RX8700 </option>
+                <option value="RX8700XT"> RX8700XT </option>
+                <option value="RX9060"> RX9060 </option>
+                <option value="RX9060XT"> RX9060XT </option>
+                <option value="RX9070"> RX9070 </option>
+                <option value="RX9070XT"> RX9070XT </option>
+                <option value="RX9080"> RX9080 </option>
+                <option value="RX9080XT"> RX9080XT </option>
+                <option value="RX9090"> RX9090 </option>
+                <option value="RX9090XT"> RX9090XT </option>
+            </select>
+
+            <label> SSD NVMe</label>
+            <select name="SSD NVMe" id=" SSD NVMe">
+                <option value="128gb"> 128gb </option>
+                <option value="256gb"> 256gb </option>
+                <option value="512gb"> 512gb </option>
+                <option value="1tb"> 1tb </option>
+                <option value="2tb"> 2tb </option>
+                <option value="4tb"> 4tb </option>
+                <option value="8tb"> 8tb</option>
+            </select>
+
+
+            <button type="button"> Comprar </button>
+            <button type="button"> Adicionar ao Carrinho</button>
+        </div>
+
+
+        <div class="produto">
+            <label> COMPUTADOR RYZEN E NIVIDIA RTX </label>
+            <img src="https://carrefourbr.vtexassets.com/arquivos/ids/192126229/image-0.jpg?v=638827644639500000" height="200" width="200" alt="COMPUTADOR RYZEN E NIVIDIA RTX">
+
+             <label> Memória Ram </label>
+            <select name="ram" id="ram">
+                <option value="4gb"> 4gb </option>
+                <option value="8gb"> 8gb </option>
+                <option value="16gb"> 16gb </option>
+                <option value="32gb"> 32gb </option>
+                <option value="64gb"> 64gb </option>
+            </select>
+
+            <label for="processador-ryzen">Processador RYZEN</label>
+<select name="processador-ryzen" id="processador-ryzen">
+
+    <optgroup label="Ryzen 3">
+        <option value="R3 1200">R3 1200</option>
+        <option value="R3 1300X">R3 1300X</option>
+        <option value="R3 2200G">R3 2200G</option>
+        <option value="R3 3200G">R3 3200G</option>
+        <option value="R3 4100">R3 4100</option>
+        <option value="R3 5300G">R3 5300G</option>
+    </optgroup>
+
+    <optgroup label="Ryzen 5">
+        <option value="R5 1600">R5 1600</option>
+        <option value="R5 2600">R5 2600</option>
+        <option value="R5 3600">R5 3600</option>
+        <option value="R5 5600">R5 5600</option>
+        <option value="R5 5600X">R5 5600X</option>
+        <option value="R5 7600">R5 7600</option>
+        <option value="R5 7600X">R5 7600X</option>
+        <option value="R5 9600X">R5 9600X</option>
+    </optgroup>
+
+    <optgroup label="Ryzen 7">
+        <option value="R7 1700">R7 1700</option>
+        <option value="R7 2700X">R7 2700X</option>
+        <option value="R7 3700X">R7 3700X</option>
+        <option value="R7 5700X">R7 5700X</option>
+        <option value="R7 5800X">R7 5800X</option>
+        <option value="R7 5800X3D">R7 5800X3D</option>
+        <option value="R7 7700X">R7 7700X</option>
+        <option value="R7 7800X3D">R7 7800X3D</option>
+        <option value="R7 9700X">R7 9700X</option>
+        <option value="R7 9800X3D">R7 9800X3D</option>
+    </optgroup>
+
+    <optgroup label="Ryzen 9">
+        <option value="R9 3900X">R9 3900X</option>
+        <option value="R9 3950X">R9 3950X</option>
+        <option value="R9 5900X">R9 5900X</option>
+        <option value="R9 5950X">R9 5950X</option>
+        <option value="R9 7900X">R9 7900X</option>
+        <option value="R9 7900X3D">R9 7900X3D</option>
+        <option value="R9 7950X">R9 7950X</option>
+        <option value="R9 7950X3D">R9 7950X3D</option>
+        <option value="R9 9900X">R9 9900X</option>
+        <option value="R9 9950X">R9 9950X</option>
+    </optgroup>
+
+</select>
+
+            <label> NVIDIA RTX </label>
+            <select name="NVIDIA RTX" id="GPU">
+                <option value="RTX3050"> RTX3050 </option>
+                <option value="RTX3060"> RTX3060 </option>
+                 <option value="RTX3070"> RTX3070 </option>
+                <option value="RTX3080"> RTX3080 </option>
+                 <option value="RTX3090"> RTX3090 </option>
+
+                 <option value="RTX4050"> RTX4050 </option>
+                <option value="RTX4060"> RTX4060 </option>
+                 <option value="RTX4070"> RTX4070 </option>
+                <option value="RTX4080"> RTX4080 </option>
+                <option value="RTX4090"> RTX4090 </option>
+
+                 <option value="RTX5050"> RTX5050 </option>
+                <option value="RTX5060"> RTX5060 </option>
+                 <option value="RTX5070"> RTX5070 </option>
+                <option value="RTX5080"> RTX5080 </option>
+                <option value="RTX5090"> RTX5090 </option>
+            </select>
+
+            <label> SSD NVMe</label>
+            <select name="SSD NVMe" id=" SSD NVMe">
+                <option value="128gb"> 128gb </option>
+                <option value="256gb"> 256gb </option>
+                <option value="512gb"> 512gb </option>
+                <option value="1tb"> 1tb </option>
+                <option value="2tb"> 2tb </option>
+                <option value="4tb"> 4tb </option>
+                <option value="8tb"> 8tb</option>
+            </select>
+
+            <button type="button"> Comprar </button>
+            <button type="button"> Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Carrinho -->
+    <h2>Carrinho</h2>
+    <ul id="cart" class="cart"></ul>
+    <h3>Total: R$ <span id="total">0</span></h3>
+    <button id="checkout" class="btn">Finalizar Compra</button>
+
+    <script src="script.js"></script>
+
+    <input id="Barra de Pesquisa" type="text" name="Barra de Pesquisa" placeholder="Pesquisar PCs" onkeyup="search()">
+    
+        <ul>
+            <li class="Full Ryzen">Full AMD </li>
+            <li class="COMPUTADOR RYZEN E NIVIDIA RTX">COMPUTADOR RYZEN E NIVIDIA RTX</li>
+        </ul>
+
+    
+    
+    </div>
+
+</body>
+</html>
