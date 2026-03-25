@@ -194,7 +194,7 @@ const precosSSD = {
   "2tb":    1800,   // escassez: +40% vs 2024
   "4tb":    3500,
   "8tb":    6500,
-}; cxv
+};
 
 // ─────────────────────────────────────────────
 //  Calcula preço total de um produto
